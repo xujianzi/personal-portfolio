@@ -50,3 +50,6 @@ extra:
       link: https://github.com/xujianzi
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/yourname
+  
+  # ⚠️ base 路径非常重要
+  base_path: /work/
