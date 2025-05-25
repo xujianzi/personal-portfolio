@@ -2,6 +2,7 @@ site_name: "Jian Xu's Work Space"
 site_url: "https://personal-portfolio-theta-wheat.vercel.app/work/"
 docs_dir: docs
 site_dir: ../work
+use_directory_urls: false
 
 nav:
   - Home: index.md
