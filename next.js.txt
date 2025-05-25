@@ -1,0 +1,101 @@
+├── my-next-portfolio/
+│   ├── README.md
+│   ├── next.config.js
+│   ├── package.json
+│   ├── public/
+│   │   └── profile.jpg
+│   ├── styles/
+│   │   └── globals.css
+│   ├── pages/
+│   │   ├── index.js               # 包含 Hero 组件的主页
+│   │   ├── about.js
+│   │   ├── projects.js
+│   │   ├── contact.js
+│   │   └── _app.js
+│   ├── components/
+│   │   ├── Layout.js              # 包裹页面结构（含 Navbar/Footer）
+│   │   ├── Navbar.js              # 顶部导航栏（暗色模式切换）
+│   │   ├── Hero.js                # 首页头图区组件
+│   │   ├── SkillCard.js           # 技能卡片组件
+│   │   └── Footer.js              # 页脚组件
+│   └── tailwind.config.js
+
+
+// styles/globals.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+// tailwind.config.js
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+// pages/_app.js
+import '../styles/globals.css';
+import { useEffect, useState } from 'react';
+
+export default function App({ Component, pageProps }) {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      setIsDark(true);
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
+      setIsDark(true);
+    }
+  };
+
+  return <Component {...pageProps} toggleDarkMode={toggleDarkMode} isDark={isDark} />;
+}
+
+
+// components/Navbar.js
+import Link from 'next/link';
+
+export default function Navbar({ toggleDarkMode, isDark }) {
+  return (
+    <nav className="bg-white dark:bg-gray-900 shadow-md fixed w-full top-0 z-50">
+      <div className="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+        <h1 className="text-xl font-bold text-blue-600 dark:text-white">MyPortfolio</h1>
+        <div className="space-x-6 hidden md:flex">
+          <Link href="/" className="text-gray-700 dark:text-gray-100 hover:text-blue-600">Home</Link>
+          <Link href="/about" className="text-gray-700 dark:text-gray-100 hover:text-blue-600">About</Link>
+          <Link href="/projects" className="text-gray-700 dark:text-gray-100 hover:text-blue-600">Projects</Link>
+          <Link href="/contact" className="text-gray-700 dark:text-gray-100 hover:text-blue-600">Contact</Link>
+          <button
+            onClick={toggleDarkMode}
+            className="ml-4 px-2 py-1 text-sm border rounded text-gray-600 dark:text-gray-100 border-gray-400 dark:border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
+            {isDark ? 'Light' : 'Dark'}
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+}

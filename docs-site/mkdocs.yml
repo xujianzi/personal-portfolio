@@ -1,0 +1,52 @@
+site_name: "Jian Xu's Work Space"
+site_url: "https://personal-portfolio-theta-wheat.vercel.app/work/"
+docs_dir: docs
+site_dir: ../work
+
+nav:
+  - Home: index.md
+  - Projects:
+      - COVID Dashboard: Projects/covid-dashboard.md
+  - Frontend:
+      - Basic Frontend: Frontend/basic-frontend.md
+  - About: about.md
+
+theme:
+  name: material
+  # language: zh
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Fira Code
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.expand
+    - toc.integrate
+    - content.code.copy
+
+plugins:
+  - search               # 内置搜索功能
+  - git-revision-date    # 显示每页最后更新时间
+  # - mkdocstrings         # 自动文档支持（如 Python 项目）
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/xujianzi
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/yourname
