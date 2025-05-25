@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/</loc>
+         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/index.html</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Frontend/basic-frontend/</loc>
+         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Frontend/basic-frontend.html</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Projects/covid-dashboard/</loc>
+         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Projects/covid-dashboard.html</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
 </urlset>
