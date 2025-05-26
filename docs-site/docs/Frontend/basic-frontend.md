@@ -3,7 +3,7 @@
 
 ## Quick Access to hightlights
 
-➡️ [Quick BootStrap Style Dashboard](#DBC-for-Python-Dash)
+➡️ [Quick BootStrap Style for Dashboard](#10-dbc-for-python-dash)
 
 --- 
 
