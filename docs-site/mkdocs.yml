@@ -55,3 +55,14 @@ extra:
   
   # ⚠️ base 路径非常重要
   base_path: /work/
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.superfences
