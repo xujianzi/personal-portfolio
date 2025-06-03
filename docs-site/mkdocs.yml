@@ -9,6 +9,8 @@ nav:
       - COVID Dashboard: Projects/covid-dashboard.md
   - Frontend:
       - Basic Frontend: Frontend/basic-frontend.md
+  - Data Science:
+      - Long-Format-vs-Wide-Format: DataScience/Long-Format-vs-Wide-Format.md
   - About: about.md
 
 theme:
