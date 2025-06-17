@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/index.html</loc>
-         <lastmod>2025-06-03</lastmod>
+         <lastmod>2025-06-17</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/DataScience/Long-Format-vs-Wide-Format.html</loc>
-         <lastmod>2025-06-03</lastmod>
+         <lastmod>2025-06-17</lastmod>
+    </url>
+    <url>
+         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Frontend/EmailJS.html</loc>
+         <lastmod>2025-06-17</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Frontend/basic-frontend.html</loc>
-         <lastmod>2025-06-03</lastmod>
+         <lastmod>2025-06-17</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Projects/covid-dashboard.html</loc>
-         <lastmod>2025-06-03</lastmod>
+         <lastmod>2025-06-17</lastmod>
     </url>
 </urlset>

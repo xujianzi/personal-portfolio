@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>EmailJS 测试</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("WQ-fXuruU_8gMsaBJ");
+    })();
+
+    function sendEmail(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_uq31kyo', 'template_9kynzye', e.target)
+        .then((result) => {
+          alert('发送成功: ' + result.text);
+        }, (error) => {
+          alert('发送失败: ' + error.text);
+        });
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="sendEmail(event)">
+    <input type="text" name="name" placeholder="输入你的名字" required /><br>
+    <textarea name="message" placeholder="输入消息内容" required></textarea><br>
+    <button type="submit">发送邮件</button>
+  </form>
+</body>
+</html>
