@@ -1,9 +1,0 @@
-{
-    "cleanUrls": true,
-    "rewrites": [
-      { "source": "/work", "destination": "/work/index.html" },
-      { "source": "/work/", "destination": "/work/index.html" },
-      { "source": "/work/(.*)", "destination": "/work/$1" }
-    ]
-  }
-  
