@@ -2,7 +2,7 @@
 
 🚀 A modern personal portfolio website built with **HTML**, **Tailwind CSS**, and a touch of animation.
 
-🌐 Live Site: [https://personal-portfolio-theta-wheat.vercel.app/](https://personal-portfolio-theta-wheat.vercel.app/)
+🌐 Live Site: [https://xujianzi.github.io/personal-portfolio/](https://xujianzi.github.io/personal-portfolio/)
 
 ## Features
 
