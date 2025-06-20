@@ -12,6 +12,8 @@ nav:
       - EmailJS: Frontend/EmailJS.md
   - Data Science:
       - Long-Format-vs-Wide-Format: DataScience/Long-Format-vs-Wide-Format.md
+  - Linux:
+      - Basic Instruction: Linux/Basic-Instruction.md
   - About: about.md
 
 theme:
