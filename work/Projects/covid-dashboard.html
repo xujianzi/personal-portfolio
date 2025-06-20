@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#deploying-dash-locally-and-making-it-publicly-accessible-via-ngrok" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -282,8 +287,28 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Linux/Basic-Instruction.html" class="md-tabs__link">
+          
+  
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../about.md" class="md-tabs__link">
+      <a href="../about.html" class="md-tabs__link">
         
   
   
@@ -412,6 +437,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    COVID Dashboard
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="covid-dashboard.html" class="md-nav__link md-nav__link--active">
         
@@ -424,6 +464,163 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-verify-local-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verify Local Deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-set-up-postgresql-for-docker-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Set Up PostgreSQL for Docker Access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Set Up PostgreSQL for Docker Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-find-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Find Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-edit-postgresqlconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Edit postgresql.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-edit-pg_hbaconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Edit pg_hba.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-restart-postgresql-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Restart PostgreSQL Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-install-and-configure-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Install and Configure Ngrok
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Install and Configure Ngrok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-download-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Download Ngrok
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-register-for-a-free-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Register for a Free Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-authenticate-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Authenticate Ngrok
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-expose-dash-to-the-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Expose Dash to the Public
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-optional-one-click-startup-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Optional: One-Click Startup Script
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-notes-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Notes and Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -616,8 +813,83 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../Linux/Basic-Instruction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Instruction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about.html" class="md-nav__link">
         
   
   
@@ -649,6 +921,154 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-verify-local-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Verify Local Deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-set-up-postgresql-for-docker-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Set Up PostgreSQL for Docker Access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Set Up PostgreSQL for Docker Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-find-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Find Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-edit-postgresqlconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Edit postgresql.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-edit-pg_hbaconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Edit pg_hba.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-restart-postgresql-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Restart PostgreSQL Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-install-and-configure-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Install and Configure Ngrok
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Install and Configure Ngrok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-download-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Download Ngrok
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-register-for-a-free-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Register for a Free Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-authenticate-ngrok" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Authenticate Ngrok
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-expose-dash-to-the-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Expose Dash to the Public
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-optional-one-click-startup-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Optional: One-Click Startup Script
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-notes-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Notes and Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -664,9 +1084,106 @@
 
 
 
-  <h1>COVID Dashboard</h1>
-
-
+<h1 id="deploying-dash-locally-and-making-it-publicly-accessible-via-ngrok">Deploying Dash Locally and Making It Publicly Accessible via Ngrok<a class="headerlink" href="#deploying-dash-locally-and-making-it-publicly-accessible-via-ngrok" title="Permanent link">&para;</a></h1>
+<p>This guide walks you through all the steps to deploy your Dash app locally using Docker and PostgreSQL, and share it publicly using Ngrok.</p>
+<hr />
+<h2 id="1-prerequisites">1. Prerequisites<a class="headerlink" href="#1-prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before starting, ensure you have:</p>
+<ul>
+<li>A working Dash app running locally on port 8050</li>
+<li>Docker installed and the app running inside a container</li>
+<li>PostgreSQL running on your local Windows machine, accessible to the Dash app</li>
+</ul>
+<hr />
+<h2 id="2-verify-local-deployment">2. Verify Local Deployment<a class="headerlink" href="#2-verify-local-deployment" title="Permanent link">&para;</a></h2>
+<p>Ensure your Dash app is accessible via your browser at:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>http://localhost:8050
+</code></pre></div></td></tr></table></div>
+<p>Make sure:</p>
+<ul>
+<li>The Dash app binds to <code>0.0.0.0</code> (not just <code>127.0.0.1</code>) inside Docker</li>
+<li>The Docker container can connect to the PostgreSQL database via <code>host.docker.internal</code></li>
+</ul>
+<p>Example Dash app launch code:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8050</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="3-set-up-postgresql-for-docker-access">3. Set Up PostgreSQL for Docker Access<a class="headerlink" href="#3-set-up-postgresql-for-docker-access" title="Permanent link">&para;</a></h2>
+<h3 id="31-find-configuration-files">3.1 Find Configuration Files<a class="headerlink" href="#31-find-configuration-files" title="Permanent link">&para;</a></h3>
+<p>Run this SQL command in pgAdmin or psql to find the path to config files:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">config_file</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">hba_file</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="32-edit-postgresqlconf">3.2 Edit postgresql.conf<a class="headerlink" href="#32-edit-postgresqlconf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Locate and open <code>postgresql.conf</code></li>
+<li>Change:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>listen_addresses = &#39;*&#39;
+</code></pre></div></td></tr></table></div>
+<h3 id="33-edit-pg_hbaconf">3.3 Edit pg_hba.conf<a class="headerlink" href="#33-edit-pg_hbaconf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Open <code>pg_hba.conf</code></li>
+<li>Add this line:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>host    all             all             172.17.0.0/16           md5
+</code></pre></div></td></tr></table></div>
+<p>This allows Docker container IPs to connect</p>
+<h3 id="34-restart-postgresql-service">3.4 Restart PostgreSQL Service<a class="headerlink" href="#34-restart-postgresql-service" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Open <code>services.msc</code></li>
+<li>Find <code>postgresql-x64-14</code> (or your version)</li>
+<li>Right-click &gt; Restart</li>
+</ul>
+<hr />
+<h2 id="4-install-and-configure-ngrok">4. Install and Configure Ngrok<a class="headerlink" href="#4-install-and-configure-ngrok" title="Permanent link">&para;</a></h2>
+<h3 id="41-download-ngrok">4.1 Download Ngrok<a class="headerlink" href="#41-download-ngrok" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Visit: <a href="https://ngrok.com/download">https://ngrok.com/download</a></li>
+<li>Download the Windows version and unzip it to a folder (e.g., <code>C:\ngrok</code>)</li>
+</ul>
+<h3 id="42-register-for-a-free-account">4.2 Register for a Free Account<a class="headerlink" href="#42-register-for-a-free-account" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Visit: <a href="https://dashboard.ngrok.com/signup">https://dashboard.ngrok.com/signup</a></li>
+<li>After login, copy your <strong>auth token</strong></li>
+</ul>
+<h3 id="43-authenticate-ngrok">4.3 Authenticate Ngrok<a class="headerlink" href="#43-authenticate-ngrok" title="Permanent link">&para;</a></h3>
+<p>Open PowerShell or CMD in the Ngrok folder and run:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">./</span><span class="n">ngrok</span> <span class="n">authtoken</span> <span class="n">YOUR_AUTHTOKEN_HERE</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="5-expose-dash-to-the-public">5. Expose Dash to the Public<a class="headerlink" href="#5-expose-dash-to-the-public" title="Permanent link">&para;</a></h2>
+<p>In the same folder, run:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">./</span><span class="n">ngrok</span> <span class="n">http</span> <span class="n">8050</span>
+</code></pre></div></td></tr></table></div>
+<p>You’ll see an output like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Forwarding    https://abcd1234.ngrok.io -&gt; http://localhost:8050
+</code></pre></div></td></tr></table></div>
+<p>Share this HTTPS URL with others—they can now access your Dash app over the internet.</p>
+<hr />
+<h2 id="6-optional-one-click-startup-script">6. Optional: One-Click Startup Script<a class="headerlink" href="#6-optional-one-click-startup-script" title="Permanent link">&para;</a></h2>
+<p>Create a <code>start_ngrok.bat</code> file with:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">@</span><span class="k">echo</span> off
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">cd</span> /d C:\ngrok
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>ngrok http 8050
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="k">pause</span>
+</code></pre></div></td></tr></table></div>
+<p>Double-click to launch the tunnel easily.</p>
+<hr />
+<h2 id="7-notes-and-considerations">7. Notes and Considerations<a class="headerlink" href="#7-notes-and-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Free Ngrok</strong> tunnels last up to 8 hours</li>
+<li>Each session creates a <strong>new</strong> URL unless you upgrade for custom subdomains</li>
+<li>For production use, consider persistent hosting (e.g., cloud VM + reverse proxy)</li>
+</ul>
+<hr />
+<p>You’re now ready to share your Dash app from your local machine with anyone in the world!</p>
 
 
 
@@ -687,7 +1204,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-05-26
+    2025-06-19
   </span>
 
     
