@@ -14,6 +14,9 @@ nav:
       - Long-Format-vs-Wide-Format: DataScience/Long-Format-vs-Wide-Format.md
   - Linux:
       - Basic Instruction: Linux/Basic-Instruction.md
+  - Tools:
+    - Cloudflared: Tools/Cloudflared-Deploy-APP.md
+    - Docker: Tools/Docker.md
   - About: about.md
 
 theme:

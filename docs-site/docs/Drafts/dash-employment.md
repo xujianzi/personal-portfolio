@@ -32,8 +32,6 @@ docker rm dash-container
 
 ## 上线项目后设置PostgreSQL
 
-
-
 你现在已经完成了 95% 的上线流程，是否需要我下一步帮你：
 
 加入 Nginx 代理，绑定端口 80？
