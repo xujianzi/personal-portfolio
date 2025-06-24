@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://personal-portfolio-theta-wheat.vercel.app/work/Linux/dash-employment.html">
+        <link rel="canonical" href="https://personal-portfolio-theta-wheat.vercel.app/work/Tools/Cloudflared-Deploy-APP.html">
       
       
+        <link rel="prev" href="../Linux/Basic-Instruction.html">
+      
+      
+        <link rel="next" href="Docker.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Dash employment - Jian Xu's Work Space</title>
+        <title>Cloudflared - Jian Xu's Work Space</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ec2-docker" class="md-skip">
+        <a href="#deploying-local-applications-using-cloudflared-tunnel" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dash employment
+              Cloudflared
             
           </span>
         </div>
@@ -284,11 +288,33 @@
     
     
       <li class="md-tabs__item">
-        <a href="Basic-Instruction.html" class="md-tabs__link">
+        <a href="../Linux/Basic-Instruction.html" class="md-tabs__link">
           
   
   
   Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Cloudflared-Deploy-APP.html" class="md-tabs__link">
+          
+  
+  
+  Tools
 
         </a>
       </li>
@@ -670,12 +696,278 @@
   
   
     <li class="md-nav__item">
-      <a href="Basic-Instruction.html" class="md-nav__link">
+      <a href="../Linux/Basic-Instruction.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Basic Instruction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Cloudflared
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Cloudflared-Deploy-APP.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloudflared
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-cloudflared" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install cloudflared
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-authenticate-with-cloudflare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Authenticate with Cloudflare
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-a-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create a Tunnel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-configure-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Configure the Tunnel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-route-dns-to-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Route DNS to the Tunnel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-start-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Start the Tunnel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Start the Tunnel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-temporary-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option A: Temporary (development)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-persistent-as-a-windows-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option B: Persistent as a Windows Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-verify-public-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Verify Public Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Recommendations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
     
   </span>
   
@@ -732,6 +1024,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -740,27 +1034,123 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ec2-docker" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      在 EC2 上安装 Docker
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      实用命令
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#postgresql" class="md-nav__link">
+  <a href="#step-1-install-cloudflared" class="md-nav__link">
     <span class="md-ellipsis">
-      上线项目后设置PostgreSQL
+      Step 1: Install cloudflared
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-authenticate-with-cloudflare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Authenticate with Cloudflare
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-a-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create a Tunnel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-configure-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Configure the Tunnel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-route-dns-to-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Route DNS to the Tunnel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-start-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Start the Tunnel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Start the Tunnel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-temporary-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option A: Temporary (development)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-persistent-as-a-windows-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option B: Persistent as a Windows Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-verify-public-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Verify Public Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Recommendations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
     </span>
   </a>
   
@@ -782,55 +1172,96 @@
 
 
 
-  <h1>Dash employment</h1>
-
-<h2 id="ec2-docker">在 EC2 上安装 Docker<a class="headerlink" href="#ec2-docker" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 安装 Docker</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w"> </span>-y
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1"># 开机自动启动</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1"># 将当前用户加入 docker 组（可选）</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+<h1 id="deploying-local-applications-using-cloudflared-tunnel">Deploying Local Applications Using Cloudflared Tunnel<a class="headerlink" href="#deploying-local-applications-using-cloudflared-tunnel" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><code>cloudflared</code> is a command-line tool provided by <strong>Cloudflare</strong> that establishes a secure tunnel between your local machine and the Cloudflare network. This allows developers to expose a local web service to the public internet without needing to open firewall ports, configure NAT, or obtain a static IP address. It is widely used to securely serve internal services, dashboards, or development websites over HTTPS using custom domain names.</p>
+<p>This document provides a comprehensive step-by-step guide to deploying a local web application (such as a Dash dashboard) using Cloudflare Tunnel on a Windows machine, with a custom domain managed via Cloudflare DNS.</p>
+<hr />
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A registered domain name added to your Cloudflare account</li>
+<li>A local web service running (e.g., Dash app on <code>http://localhost:8050</code>)</li>
+<li>Windows environment with administrative privileges</li>
+</ul>
+<hr />
+<h2 id="step-1-install-cloudflared">Step 1: Install <code>cloudflared</code><a class="headerlink" href="#step-1-install-cloudflared" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Download <code>cloudflared</code> from the <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/#windows">official Cloudflare site</a></li>
+<li>Place <code>cloudflared.exe</code> in a known directory (e.g., <code>C:\cloudflared</code>)</li>
+<li>(Optional) Add the directory to the <strong>system PATH</strong> variable for global command-line access</li>
+</ol>
+<hr />
+<h2 id="step-2-authenticate-with-cloudflare">Step 2: Authenticate with Cloudflare<a class="headerlink" href="#step-2-authenticate-with-cloudflare" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>cloudflared<span class="w"> </span>login
 </code></pre></div></td></tr></table></div>
-<h2 id="_1">实用命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># 查看当前运行的容器</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>docker<span class="w"> </span>ps
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1"># 查看日志（debug 用）</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>docker<span class="w"> </span>logs<span class="w"> </span>dash-container
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1"># 停止容器</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>docker<span class="w"> </span>stop<span class="w"> </span>dash-container
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># 删除容器</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>docker<span class="w"> </span>rm<span class="w"> </span>dash-container
+<ul>
+<li>A browser window will open prompting you to log in and select your domain</li>
+<li>On success, a <code>.cloudflared/.cert.pem</code> file will be generated at <code>C:\Users\&lt;YourUsername&gt;\.cloudflared\.cert.pem</code></li>
+</ul>
+<hr />
+<h2 id="step-3-create-a-tunnel">Step 3: Create a Tunnel<a class="headerlink" href="#step-3-create-a-tunnel" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>create<span class="w"> </span>dash-tunnel
 </code></pre></div></td></tr></table></div>
-<h2 id="postgresql">上线项目后设置PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h2>
-<p>你现在已经完成了 95% 的上线流程，是否需要我下一步帮你：</p>
-<p>加入 Nginx 代理，绑定端口 80？</p>
+<ul>
+<li>This generates a unique Tunnel ID and corresponding credentials <code>.json</code> file</li>
+</ul>
+<hr />
+<h2 id="step-4-configure-the-tunnel">Step 4: Configure the Tunnel<a class="headerlink" href="#step-4-configure-the-tunnel" title="Permanent link">&para;</a></h2>
+<p>Create a <code>config.yml</code> file in:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>C:\Users\&lt;YourUsername&gt;\.cloudflared\config.yml
+</code></pre></div></td></tr></table></div>
+<p>Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">tunnel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dash-tunnel</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nt">credentials-file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C:</span><span class="err">\</span><span class="s">Users\Now</span><span class="nv"> </span><span class="s">Now</span><span class="err">\</span><span class="s">.cloudflared</span><span class="err">\</span><span class="s">your-dash-tunnel-name.json&quot;</span><span class="w"> </span><span class="c1"># The name you gave to the tunnel when you created it</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nt">ingress</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dash.geopulse.fun</span><span class="w"> </span><span class="c1"># The custom domain you added to Cloudflare</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8050</span><span class="w">    </span><span class="c1"># The local port your service is running on</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span><span class="w">    </span><span class="c1"># A 404 page to handle non-matched routes</span>
+</code></pre></div></td></tr></table></div>
+<p>Ensure paths are correctly quoted if they contain spaces.</p>
+<hr />
+<h2 id="step-5-route-dns-to-the-tunnel">Step 5: Route DNS to the Tunnel<a class="headerlink" href="#step-5-route-dns-to-the-tunnel" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>route<span class="w"> </span>dns<span class="w"> </span>dash-tunnel<span class="w"> </span>dash.geopulse.fun
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>This command creates a DNS <code>CNAME</code> record pointing your subdomain to the tunnel</li>
+</ul>
+<hr />
+<h2 id="step-6-start-the-tunnel">Step 6: Start the Tunnel<a class="headerlink" href="#step-6-start-the-tunnel" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-temporary-development">Option A: Temporary (development)<a class="headerlink" href="#option-a-temporary-development" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;C:\Users\Now Now\.cloudflared\config.yml&quot;</span><span class="w"> </span>run<span class="w"> </span>dash-tunnel
+</code></pre></div></td></tr></table></div>
+<h3 id="option-b-persistent-as-a-windows-service">Option B: Persistent as a Windows Service<a class="headerlink" href="#option-b-persistent-as-a-windows-service" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>cloudflared<span class="w"> </span>service<span class="w"> </span>install
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>This will run the tunnel automatically on system boot</li>
+<li>Alternatively, create a Task Scheduler entry to launch it on user login</li>
+</ul>
+<hr />
+<h2 id="step-7-verify-public-access">Step 7: Verify Public Access<a class="headerlink" href="#step-7-verify-public-access" title="Permanent link">&para;</a></h2>
+<p>Visit:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>https://dash.geopulse.fun
+</code></pre></div></td></tr></table></div>
+<p>If everything is configured correctly, you should see your local Dash app accessible over HTTPS.</p>
+<hr />
+<h2 id="additional-recommendations">Additional Recommendations<a class="headerlink" href="#additional-recommendations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use <code>cloudflared tunnel info dash-tunnel</code> to verify tunnel health</li>
+<li>Keep your Dash app auto-started with Docker's <code>--restart=always</code> flag</li>
+<li>Use GitHub Pages + Cloudflare DNS together for static site hosting</li>
+<li>Consider implementing Basic Auth or Access Policies via Cloudflare Zero Trust for private dashboards</li>
+</ul>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>By combining <code>cloudflared</code>, a local web service, and Cloudflare's secure global edge network, you can safely expose applications for development, collaboration, or even lightweight production use with minimal infrastructure and maximum security.</p>
 
 
 
@@ -851,7 +1282,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-06-19
+    2025-06-23
   </span>
 
     
