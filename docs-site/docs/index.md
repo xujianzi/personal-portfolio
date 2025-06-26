@@ -42,3 +42,5 @@ I'm always open to discussing new opportunities and collaborations:
 - 💼 LinkedIn: [Jian Xu](https://www.linkedin.com/in/jian-xu-a24548193/)
 - 🐱 GitHub: [xujianzi](https://github.com/xujianzi)
 - 🌐 Portfolio: [GeoPulse](https://www.geopulse.fun/)
+
+

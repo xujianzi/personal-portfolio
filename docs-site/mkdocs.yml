@@ -17,6 +17,7 @@ nav:
   - Tools:
     - Cloudflared: Tools/Cloudflared-Deploy-APP.md
     - Docker: Tools/Docker.md
+  - tags: tags.md
   - About: about.md
 
 theme:
@@ -24,13 +25,13 @@ theme:
   # language: zh
   palette:
     - scheme: default
-      primary: blue
+      primary: indigo
       accent: light blue
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - scheme: slate
-      primary: blue
+      primary: indigo
       accent: light blue
       toggle:
         icon: material/weather-night
@@ -48,13 +49,16 @@ theme:
     - header.autohide        # 自动隐藏顶部导航栏（向下滚动时）
     - navigation.sections    # 在侧边栏中添加顶级分区标题
     - content.code.copy
-    - toc.follow   
+    - toc.follow 
+
 
 use_directory_urls: false
 
 plugins:
   - search               # 内置搜索功能
   - git-revision-date    # 显示每页最后更新时间
+  - tags
+  - git-revision-date
   # - mkdocstrings         # 自动文档支持（如 Python 项目）
 
 extra:
@@ -68,12 +72,17 @@ extra:
   base_path: /work/
 
 markdown_extensions:
-  - codehilite
-  - admonition
+  - attr_list # 为 Markdown 元素添加属性
+  - codehilite # 代码高亮
   - toc:
       permalink: true
   - pymdownx.highlight:
       linenums: true
       anchor_linenums: true
       use_pygments: true
-  - pymdownx.superfences
+  - admonition
+  - meta
+  - pymdownx.details # For collapsible admonitions
+  - pymdownx.superfences # Required for nested content and other advanced features
+  - pymdownx.tabbed # For content tabs
+  - tables

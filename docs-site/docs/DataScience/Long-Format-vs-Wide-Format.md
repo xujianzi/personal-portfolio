@@ -1,6 +1,7 @@
 # Long Format vs Wide Format in Data Analysis
 
->In data analysis, the structure of your dataset significantly impacts its usability for different tasks. Two common formats are:
+??? admonition_type "Notes"
+    In data analysis, the structure of your dataset significantly impacts its usability for different tasks. Two common formats
 
 - Long Format (also called "tidy" or "normalized")
 

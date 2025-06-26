@@ -1,3 +1,9 @@
+---
+tags:
+  - docker
+  - tutorial
+---
+
 # Docker Basics and Application Deployment Guide
 
 ## Overview
