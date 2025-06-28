@@ -7,8 +7,12 @@ tags:
 # Docker Basics and Application Deployment Guide
 
 ## Overview
+!!! note
+    This guide assumes a basic understanding of Docker and assumes you have Docker Desktop installed on your Windows machine.
 
-[Docker](https://www.docker.com/) is a containerization platform that enables developers to package applications and their dependencies into isolated environments called containers. These containers are lightweight, portable, and consistent across development, staging, and production environments.
+
+!!! abstract
+    [Docker](https://www.docker.com/) is a containerization platform that enables developers to package applications and their dependencies into isolated environments called containers. These containers are lightweight, portable, and consistent across development, staging, and production environments.
 
 Docker Desktop Link: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 
@@ -50,13 +54,17 @@ docker rmi <image_id>          # Delete a local image
 ```
 
 ### Container Lifecycle
+!!! Tip
+    Always stop containers before removing them to avoid data loss. 
 
 ```bash
 docker run -d -p 8050:8050 myimage   # Run a container in detached mode with port mapping
+docker run -d --name my-container -p 8050:8050 myimage   # Run a container in detached mode with port mapping and name
 docker ps                            # List running containers
 docker ps -a                         # List all containers
 docker stop <container_id>          # Stop a container
 docker rm <container_id>            # Remove a container
+docker stop my-container            # Stop a container by name
 ```
 
 ### Utilities
@@ -69,8 +77,8 @@ docker logs <container_id>               # View stdout/stderr logs
 ---
 
 ## Example: Deploying a Dash App Using Docker
-
-This section demonstrates how to containerize and run a Dash data visualization application.
+!!! example
+    This section demonstrates how to containerize and run a Dash data visualization application.
 
 ### Directory Structure
 
