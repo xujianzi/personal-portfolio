@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/index.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/about.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
+    </url>
+    <url>
+         <loc>https://personal-portfolio-theta-wheat.vercel.app/work/tags.html</loc>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/DataScience/Long-Format-vs-Wide-Format.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Drafts/dash-employment.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Frontend/EmailJS.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Frontend/basic-frontend.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Linux/Basic-Instruction.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Projects/covid-dashboard.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Tools/Cloudflared-Deploy-APP.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
     <url>
          <loc>https://personal-portfolio-theta-wheat.vercel.app/work/Tools/Docker.html</loc>
-         <lastmod>2025-06-26</lastmod>
+         <lastmod>2025-06-28</lastmod>
     </url>
 </urlset>
