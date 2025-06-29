@@ -17,6 +17,7 @@ nav:
   - Tools:
     - Cloudflared: Tools/Cloudflared-Deploy-APP.md
     - Docker: Tools/Docker.md
+    - uv: Tools/uv.md
   - tags: tags.md
   - About: about.md
 
@@ -49,6 +50,7 @@ theme:
     - header.autohide        # 自动隐藏顶部导航栏（向下滚动时）
     - navigation.sections    # 在侧边栏中添加顶级分区标题
     - content.code.copy
+    - content.code.select
     - toc.follow 
 
 
@@ -80,9 +82,13 @@ markdown_extensions:
       linenums: true
       anchor_linenums: true
       use_pygments: true
+      pygments_lang_class: true
+      line_spans: true
   - admonition
   - meta
   - pymdownx.details # For collapsible admonitions
+  - pymdownx.inlinehilite # 行内代码高亮
+  - pymdownx.snippets # 代码片段
   - pymdownx.superfences # Required for nested content and other advanced features
   - pymdownx.tabbed # For content tabs
   - tables

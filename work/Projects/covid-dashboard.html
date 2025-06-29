@@ -1012,6 +1012,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/uv.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    uv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1256,40 +1279,40 @@
 <hr />
 <h2 id="2-verify-local-deployment">2. Verify Local Deployment<a class="headerlink" href="#2-verify-local-deployment" title="Permanent link">&para;</a></h2>
 <p>Ensure your Dash app is accessible via your browser at:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>http://localhost:8050
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>http://localhost:8050
+</span></code></pre></div></td></tr></table></div>
 <p>Make sure:</p>
 <ul>
 <li>The Dash app binds to <code>0.0.0.0</code> (not just <code>127.0.0.1</code>) inside Docker</li>
 <li>The Docker container can connect to the PostgreSQL database via <code>host.docker.internal</code></li>
 </ul>
 <p>Example Dash app launch code:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8050</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span id="True-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8050</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="3-set-up-postgresql-for-docker-access">3. Set Up PostgreSQL for Docker Access<a class="headerlink" href="#3-set-up-postgresql-for-docker-access" title="Permanent link">&para;</a></h2>
 <h3 id="31-find-configuration-files">3.1 Find Configuration Files<a class="headerlink" href="#31-find-configuration-files" title="Permanent link">&para;</a></h3>
 <p>Run this SQL command in pgAdmin or psql to find the path to config files:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">config_file</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">hba_file</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">config_file</span><span class="p">;</span>
+</span><span id="True-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">SHOW</span><span class="w"> </span><span class="n">hba_file</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="32-edit-postgresqlconf">3.2 Edit postgresql.conf<a class="headerlink" href="#32-edit-postgresqlconf" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Locate and open <code>postgresql.conf</code></li>
 <li>Change:</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>listen_addresses = &#39;*&#39;
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>listen_addresses = &#39;*&#39;
+</span></code></pre></div></td></tr></table></div>
 <h3 id="33-edit-pg_hbaconf">3.3 Edit pg_hba.conf<a class="headerlink" href="#33-edit-pg_hbaconf" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Open <code>pg_hba.conf</code></li>
 <li>Add this line:</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>host    all             all             172.17.0.0/16           md5
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>host    all             all             172.17.0.0/16           md5
+</span></code></pre></div></td></tr></table></div>
 <p>This allows Docker container IPs to connect</p>
 <h3 id="34-restart-postgresql-service">3.4 Restart PostgreSQL Service<a class="headerlink" href="#34-restart-postgresql-service" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1311,28 +1334,28 @@
 </ul>
 <h3 id="43-authenticate-ngrok">4.3 Authenticate Ngrok<a class="headerlink" href="#43-authenticate-ngrok" title="Permanent link">&para;</a></h3>
 <p>Open PowerShell or CMD in the Ngrok folder and run:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">./</span><span class="n">ngrok</span> <span class="n">authtoken</span> <span class="n">YOUR_AUTHTOKEN_HERE</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-powershell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">./</span><span class="n">ngrok</span> <span class="n">authtoken</span> <span class="n">YOUR_AUTHTOKEN_HERE</span>
+</span></code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="5-expose-dash-to-the-public">5. Expose Dash to the Public<a class="headerlink" href="#5-expose-dash-to-the-public" title="Permanent link">&para;</a></h2>
 <p>In the same folder, run:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">./</span><span class="n">ngrok</span> <span class="n">http</span> <span class="n">8050</span>
-</code></pre></div></td></tr></table></div>
+<div class="language-powershell highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">./</span><span class="n">ngrok</span> <span class="n">http</span> <span class="n">8050</span>
+</span></code></pre></div></td></tr></table></div>
 <p>You’ll see an output like:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Forwarding    https://abcd1234.ngrok.io -&gt; http://localhost:8050
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Forwarding    https://abcd1234.ngrok.io -&gt; http://localhost:8050
+</span></code></pre></div></td></tr></table></div>
 <p>Share this HTTPS URL with others—they can now access your Dash app over the internet.</p>
 <hr />
 <h2 id="6-optional-one-click-startup-script">6. Optional: One-Click Startup Script<a class="headerlink" href="#6-optional-one-click-startup-script" title="Permanent link">&para;</a></h2>
 <p>Create a <code>start_ngrok.bat</code> file with:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="language-bat highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">@</span><span class="k">echo</span> off
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">cd</span> /d C:\ngrok
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>ngrok http 8050
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="k">pause</span>
-</code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">@</span><span class="k">echo</span> off
+</span><span id="True-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">cd</span> /d C:\ngrok
+</span><span id="True-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>ngrok http 8050
+</span><span id="True-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="k">pause</span>
+</span></code></pre></div></td></tr></table></div>
 <p>Double-click to launch the tunnel easily.</p>
 <hr />
 <h2 id="7-notes-and-considerations">7. Notes and Considerations<a class="headerlink" href="#7-notes-and-considerations" title="Permanent link">&para;</a></h2>
@@ -1444,7 +1467,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "header.autohide", "navigation.sections", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "header.autohide", "navigation.sections", "content.code.copy", "content.code.select", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>

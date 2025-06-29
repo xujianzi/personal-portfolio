@@ -997,6 +997,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="uv.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    uv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1233,55 +1256,55 @@
 </ol>
 <hr />
 <h2 id="step-2-authenticate-with-cloudflare">Step 2: Authenticate with Cloudflare<a class="headerlink" href="#step-2-authenticate-with-cloudflare" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>cloudflared<span class="w"> </span>login
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>cloudflared<span class="w"> </span>login
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li>A browser window will open prompting you to log in and select your domain</li>
 <li>On success, a <code>.cloudflared/.cert.pem</code> file will be generated at <code>C:\Users\&lt;YourUsername&gt;\.cloudflared\.cert.pem</code></li>
 </ul>
 <hr />
 <h2 id="step-3-create-a-tunnel">Step 3: Create a Tunnel<a class="headerlink" href="#step-3-create-a-tunnel" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>create<span class="w"> </span>dash-tunnel
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>create<span class="w"> </span>dash-tunnel
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li>This generates a unique Tunnel ID and corresponding credentials <code>.json</code> file</li>
 </ul>
 <hr />
 <h2 id="step-4-configure-the-tunnel">Step 4: Configure the Tunnel<a class="headerlink" href="#step-4-configure-the-tunnel" title="Permanent link">&para;</a></h2>
 <p>Create a <code>config.yml</code> file in:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>C:\Users\&lt;YourUsername&gt;\.cloudflared\config.yml
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>C:\Users\&lt;YourUsername&gt;\.cloudflared\config.yml
+</span></code></pre></div></td></tr></table></div>
 <p>Example:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">tunnel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dash-tunnel</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nt">credentials-file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C:</span><span class="err">\</span><span class="s">Users\Now</span><span class="nv"> </span><span class="s">Now</span><span class="err">\</span><span class="s">.cloudflared</span><span class="err">\</span><span class="s">your-dash-tunnel-name.json&quot;</span><span class="w"> </span><span class="c1"># The name you gave to the tunnel when you created it</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nt">ingress</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dash.geopulse.fun</span><span class="w"> </span><span class="c1"># The custom domain you added to Cloudflare</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8050</span><span class="w">    </span><span class="c1"># The local port your service is running on</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span><span class="w">    </span><span class="c1"># A 404 page to handle non-matched routes</span>
-</code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">tunnel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dash-tunnel</span>
+</span><span id="True-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nt">credentials-file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C:</span><span class="err">\</span><span class="s">Users\Now</span><span class="nv"> </span><span class="s">Now</span><span class="err">\</span><span class="s">.cloudflared</span><span class="err">\</span><span class="s">your-dash-tunnel-name.json&quot;</span><span class="w"> </span><span class="c1"># The name you gave to the tunnel when you created it</span>
+</span><span id="True-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="True-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nt">ingress</span><span class="p">:</span>
+</span><span id="True-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dash.geopulse.fun</span><span class="w"> </span><span class="c1"># The custom domain you added to Cloudflare</span>
+</span><span id="True-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8050</span><span class="w">    </span><span class="c1"># The local port your service is running on</span>
+</span><span id="True-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_status:404</span><span class="w">    </span><span class="c1"># A 404 page to handle non-matched routes</span>
+</span></code></pre></div></td></tr></table></div>
 <p>Ensure paths are correctly quoted if they contain spaces.</p>
 <hr />
 <h2 id="step-5-route-dns-to-the-tunnel">Step 5: Route DNS to the Tunnel<a class="headerlink" href="#step-5-route-dns-to-the-tunnel" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>route<span class="w"> </span>dns<span class="w"> </span>dash-tunnel<span class="w"> </span>dash.geopulse.fun
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>route<span class="w"> </span>dns<span class="w"> </span>dash-tunnel<span class="w"> </span>dash.geopulse.fun
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li>This command creates a DNS <code>CNAME</code> record pointing your subdomain to the tunnel</li>
 </ul>
 <hr />
 <h2 id="step-6-start-the-tunnel">Step 6: Start the Tunnel<a class="headerlink" href="#step-6-start-the-tunnel" title="Permanent link">&para;</a></h2>
 <h3 id="option-a-temporary-development">Option A: Temporary (development)<a class="headerlink" href="#option-a-temporary-development" title="Permanent link">&para;</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;C:\Users\Now Now\.cloudflared\config.yml&quot;</span><span class="w"> </span>run<span class="w"> </span>dash-tunnel
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>--config<span class="w"> </span><span class="s2">&quot;C:\Users\Now Now\.cloudflared\config.yml&quot;</span><span class="w"> </span>run<span class="w"> </span>dash-tunnel
+</span></code></pre></div></td></tr></table></div>
 <h3 id="option-b-persistent-as-a-windows-service">Option B: Persistent as a Windows Service<a class="headerlink" href="#option-b-persistent-as-a-windows-service" title="Permanent link">&para;</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>cloudflared<span class="w"> </span>service<span class="w"> </span>install
-</code></pre></div></td></tr></table></div>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>cloudflared<span class="w"> </span>service<span class="w"> </span>install
+</span></code></pre></div></td></tr></table></div>
 <ul>
 <li>This will run the tunnel automatically on system boot</li>
 <li>Alternatively, create a Task Scheduler entry to launch it on user login</li>
@@ -1289,8 +1312,8 @@
 <hr />
 <h2 id="step-7-verify-public-access">Step 7: Verify Public Access<a class="headerlink" href="#step-7-verify-public-access" title="Permanent link">&para;</a></h2>
 <p>Visit:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>https://dash.geopulse.fun
-</code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="True-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>https://dash.geopulse.fun
+</span></code></pre></div></td></tr></table></div>
 <p>If everything is configured correctly, you should see your local Dash app accessible over HTTPS.</p>
 <hr />
 <h2 id="additional-recommendations">Additional Recommendations<a class="headerlink" href="#additional-recommendations" title="Permanent link">&para;</a></h2>
@@ -1404,7 +1427,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "header.autohide", "navigation.sections", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.expand", "header.autohide", "navigation.sections", "content.code.copy", "content.code.select", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
