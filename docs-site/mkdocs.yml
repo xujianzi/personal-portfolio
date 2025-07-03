@@ -7,6 +7,7 @@ nav:
   - Home: index.md
   - Projects:
       - COVID Dashboard: Projects/covid-dashboard.md
+      - Chat Bot: Projects/chatbot.md
   - Frontend:
       - Basic Frontend: Frontend/basic-frontend.md
       - EmailJS: Frontend/EmailJS.md
