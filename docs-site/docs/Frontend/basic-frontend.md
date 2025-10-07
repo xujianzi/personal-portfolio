@@ -1727,7 +1727,7 @@ jQuery is a fast, small, and feature-rich JavaScript library. It makes things li
 - A jQuery object is an array-like object containing DOM elements, augmented with jQuery's own methods.
 ### 1. Quick Start
 Download jQuery:
-Official site: [jquery.com](jquery.com)
+Official site: [jquery.com](https://jquery.com/)
 CDN link from notes: [https://code.jquery.com/jquery-3.6.0.min.js](https://code.jquery.com/jquery-3.6.0.min.js) (This is a specific version)
 
 Apply jQuery (Include it in your HTML):
