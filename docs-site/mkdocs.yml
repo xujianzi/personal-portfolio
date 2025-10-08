@@ -1,5 +1,5 @@
 site_name: "Jian Xu's Work Space"
-site_url: "https://personal-portfolio-theta-wheat.vercel.app/work/"
+site_url: "https://www.geopulse.fun/work/"
 docs_dir: docs
 site_dir: ../work
 
@@ -19,7 +19,9 @@ nav:
     - Cloudflared: Tools/Cloudflared-Deploy-APP.md
     - Docker: Tools/Docker.md
     - uv: Tools/uv.md
-  - tags: tags.md
+  - LLMs:
+      - Claude: LLMs/Claude.md
+  - Tags: tags.md
   - About: about.md
 
 theme:
@@ -61,7 +63,6 @@ plugins:
   - search               # 内置搜索功能
   - git-revision-date    # 显示每页最后更新时间
   - tags
-  - git-revision-date
   # - mkdocstrings         # 自动文档支持（如 Python 项目）
 
 extra:
@@ -69,7 +70,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/xujianzi
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/yourname
+      link: https://linkedin.com/in/jian-xu-gis/
   
   # ⚠️ base 路径非常重要
   base_path: /work/

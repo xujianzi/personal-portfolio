@@ -2,7 +2,10 @@
 
 ## About Me
 
-I am a passionate Data Scientist and Frontend Developer, focused on combining data analytics with modern web technologies to create valuable solutions. With expertise in both fields, I strive to bridge the gap between data insights and user-friendly applications.
+I am a GIS and spatial data scientist with a Ph.D. in GIS, focusing on geospatial analytics, urban informatics, and public health. My research integrates spatial machine learning, mobility data (SafeGraph), and socioeconomic indicators to uncover community-level health disparities.  
+Skilled in Python, SQL, Dash, and cloud-based geospatial computing (GEE, Docker), I build interactive dashboards and predictive models to translate complex spatial data into actionable insights.Research findings have been published in international journals such as AAG and IG, with interdisciplinary research and teaching experience.    
+<br>
+I’m currently seeking roles in data science, geospatial analytics, or urban intelligence where I can apply my expertise in spatial modeling and visualization to real-world challenges.
 
 ## Professional Skills
 
@@ -39,7 +42,7 @@ I am a passionate Data Scientist and Frontend Developer, focused on combining da
 I'm always open to discussing new opportunities and collaborations:
 
 - 📧 Email: [jxuforwork@gmail.com]
-- 💼 LinkedIn: [Jian Xu](https://www.linkedin.com/in/jian-xu-a24548193/)
+- 💼 LinkedIn: [Jian Xu](https://www.linkedin.com/in/jian-xu-gis/)
 - 🐱 GitHub: [xujianzi](https://github.com/xujianzi)
 - 🌐 Portfolio: [GeoPulse](https://www.geopulse.fun/)
 
