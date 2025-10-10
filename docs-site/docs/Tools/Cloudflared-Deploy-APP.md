@@ -25,6 +25,9 @@ This document provides a comprehensive step-by-step guide to deploying a local w
 ---
 
 ## Step 2: Authenticate with Cloudflare
+!!! info "Note"
+    You need to Open CMD NOT Powershell to run the following commands.
+
 
 ```bash
 cloudflared login

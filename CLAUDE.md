@@ -76,6 +76,7 @@ Commits follow conventional commit format with emoji:
 <type>(<scope>): <description>
 ```
 Examples:
+
 - `docs(Docker): 更新Docker文档并修复jquery链接`
 - `feat(docs): 添加Chat Bot项目文档及更新导航配置`
 

@@ -543,6 +543,6 @@ Claude AI, whether through the web interface, CLI (Claude Code), or API, is a po
 
 ---
 
-**Last Updated**: 2025-10-07 
+**Last Updated**: 2025-10-07
 **Version**: 1.0
 **Author**: Jian Xu

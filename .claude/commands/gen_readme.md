@@ -1,4 +1,5 @@
 请帮我为我的项目生成一个风格专业、排版美观、结构清晰、类似于 GitHub 上高赞项目（如 TensorFlow、LangChain、FastAPI、Stable Diffusion 等）的 README.md 文件。
+
 在撰写时请遵循以下要求：
 
 整体结构清晰：
@@ -36,6 +37,8 @@
 使用 Markdown 标题层级（#、##、###）清晰分区。
 
 适当使用 emoji（🚀、📦、🧠、🤝 等）增强可读性。
+
+增强可读性 —— 在合适的地方合理使用提示块（如 ::: tip、::: note、::: important 等），用于强调关键信息、补充说明或提供实用技巧。
 
 保持英文 README 为主（除非另有说明）。
 

@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.geopulse.fun/work/index.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/about.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/tags.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/DataScience/Long-Format-vs-Wide-Format.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Drafts/dash-employment.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Frontend/EmailJS.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
+    </url>
+    <url>
+         <loc>https://www.geopulse.fun/work/Frontend/Useful-Tools.html</loc>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Frontend/basic-frontend.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/LLMs/Claude.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/LLMs/temp.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Linux/Basic-Instruction.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Projects/chatbot.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Projects/covid-dashboard.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Tools/Cloudflared-Deploy-APP.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Tools/Docker.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
     <url>
          <loc>https://www.geopulse.fun/work/Tools/uv.html</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-10</lastmod>
     </url>
 </urlset>
