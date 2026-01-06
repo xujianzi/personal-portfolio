@@ -114,6 +114,12 @@ uv venv --python 3.12       # Create venv with Python 3.12
 uv venv --python 3.11.8     # Create venv with Python 3.11.8
 uv venv --python python3.12 # Use system Python 3.12
 ```
+### Lock Python Version for Project
+
+```bash
+uv python pin 3.12          # Lock project to Python 3.12
+uv python pin 3.11.8        # Lock project to Python 3.11.8
+```
 
 ---
 
@@ -135,6 +141,13 @@ This creates:
 - `.python-version` - Python version pin
 - `README.md` - Project documentation
 - Basic project structure
+
+new project steps:
+1. Initialize project with `uv init`
+2. Pin Python version with `uv python pin 3.12`
+3. Install dependencies with `uv add numpy pandas`
+4. Add development tools with `uv add --dev ruff pytest`
+5. Sync dependencies with `uv sync`
 
 ### Understanding pyproject.toml Structure
 
@@ -602,6 +615,34 @@ uv remove --dev pytest      # Remove dev dependency
 uv sync                     # Install all dependencies from pyproject.toml
 uv sync --dev               # Include dev dependencies
 uv sync --no-dev            # Only production dependencies
+```
+
+### Using uv to install pytorch
+1️⃣ 先加依赖
+```bash
+uv add torch torchvision torchaudio
+```
+2️⃣ 在 pyproject.toml 里指定 CUDA index（Linux / Windows）
+```toml
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu126" }]
+torchvision = [{ index = "pytorch-cu126" }]
+torchaudio = [{ index = "pytorch-cu126" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+```
+3️⃣ 同步并锁版本
+```bash
+uv sync
+```
+Verify Installation:
+```python
+import torch
+print(torch.cuda.is_available())
+print(torch.cuda.get_device_name(0))
 ```
 
 ---
